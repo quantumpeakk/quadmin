@@ -1,8 +1,8 @@
-# QUADMİN - ADMİN FİNDER TOOL
+# QUADMİN - ADMİN PANEL FİNDER TOOL
 
 ---
 
-## TERMUX İNSTALLATİON:
+## 📥TERMUX İNSTALLATİON:
 
 ```bash
 pkg update && pkg upgrade
