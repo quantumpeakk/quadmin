@@ -1,36 +1,15 @@
-# QUADMIN - ADMIN FINDER TOOL
-
-QUADMİN WEBSİTE ADMİN PANEL FİNDER V2
+# QUADMİN - ADMİN FİNDER TOOL
 
 ---
 
-## 📥 Termux Kurulumu
+## TERMUX İNSTALLATİON:
 
-Aşağıdaki komutları sırasıyla çalıştırarak QUADMIN'i Termux'a kurabilirsiniz:
-
-```
+```bash
 pkg update && pkg upgrade
-
-```
 pkg install python
-
-```
 pkg install git
-
-```
 pip install --upgrade pip
-
-```
-pip install requests
-
-```
-pip install beautifulsoup4
-
-```
+pip install requests beautifulsoup4 lxml
 git clone https://github.com/quantumpeakk/quadmin.git
-
-```
 cd quadmin
-
-```
 python quadmin.py
