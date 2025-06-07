@@ -1,6 +1,6 @@
 # QUADMIN - ADMIN FINDER TOOL
 
-QUADMIN, web sitelerinin admin panellerini bulmak için geliştirilmiş bir araçtır. Büyük veritabanı ve hızlı tarama özelliği ile etkili sonuçlar sunar.
+QUADMİN WEBSİTE ADMİN PANEL FİNDER V2
 
 ---
 
@@ -15,3 +15,6 @@ pkg install git
 pip install --upgrade pip
 pip install requests
 pip install beautifulsoup4
+git clone https://github.com/quantumpeakk/quadmin.git
+cd quadmin
+python quadmin.py
