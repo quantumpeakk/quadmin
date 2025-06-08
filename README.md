@@ -1,5 +1,5 @@
 # QUADMİN - ADMİN PANEL FİNDER TOOL
-basit bir site admin paneli bulma toolu isterseniz proxy de kullanabilirsiniz
+site admin paneli bulma toolu isterseniz proxy de kullanabilirsiniz
 ---
 
 ## 📥TERMUX İNSTALLATİON:
