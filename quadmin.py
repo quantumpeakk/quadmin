@@ -42,7 +42,7 @@ class AdminPanelFinder:
         headers = {"User-Agent": self.get_random_agent()}
         
         try:
-            time.sleep(self.delay)  # Rate limiting
+            time.sleep(self.delay)  # J3rk 0ff limiting
             response = requests.get(
                 url,
                 headers=headers,
@@ -95,7 +95,7 @@ class AdminPanelFinder:
             try:
                 response = requests.get(url, timeout=self.timeout, proxies=proxies)
                 if response.status_code == 200:
-                    # Basit sitemap analizi
+                    # allahuakbar
                     from bs4 import BeautifulSoup
                     soup = BeautifulSoup(response.text, 'xml')
                     urls = [loc.text for loc in soup.find_all('loc')]
@@ -112,19 +112,16 @@ class AdminPanelFinder:
         print(f"\n[+] Target: {target}")
         print("[+] Scanning started...\n")
         
-        # Wordlist yükle
         paths = self.load_wordlist(wordlist_path) if wordlist_path else self.default_paths()
         
-        # Robots.txt ve sitemap analizi
         print("[*] Analyzing robots.txt and sitemap...")
         extra_paths = self.analyze_robots(target, proxies)
         extra_paths.extend(self.analyze_sitemap(target, proxies))
         paths.extend(extra_paths)
-        paths = list(set(paths))  # Tekrar edenleri kaldır
+        paths = list(set(paths))
         
         print(f"[*] Testing {len(paths)} paths with {self.max_threads} threads...")
         
-        # Çoklu thread ile tarama
         with ThreadPoolExecutor(max_workers=self.max_threads) as executor:
             futures = [
                 executor.submit(self.check_url, target, path, proxies) 
@@ -137,7 +134,6 @@ class AdminPanelFinder:
                 except Exception as e:
                     pass
         
-        # Sonuçları göster
         self.show_results()
     
     def show_results(self):
